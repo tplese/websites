@@ -1,0 +1,39 @@
+
+/* Steps Wizard */
+.wizard > .steps .number
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+.wizard > .steps > ul > li
+{
+    width: 20%;
+}
+
+.content.clearfix
+{
+    min-height: 117rem;
+}
+
+div.v-center > h1
+{
+    margin-bottom: 4rem;
+}
+
+div.row.clearfix
+{
+    margin: 1rem;
+}
+
+/* Colored3 */
+.colored3, .colored3-hover:hover{ color:#757677 !important; }
+.bg-colored3, .bg-colored3-hover:hover{ background-color:#757677 !important; }
+.border-colored3, .border-colored3-hover:hover{ border-color:#757677 !important; }
+
+#work-experience, #education, #course, #language
+{
+    width: 100rem;
+}

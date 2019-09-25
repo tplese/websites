@@ -1,0 +1,27 @@
+@media only screen{
+        .wizard > .steps .number{ font-size:inherit; line-height: 60px; display: block; width: 60px; height: 60px; margin:0 auto 20px; border-radius: 50%; background-color:#eee; border:1px solid #ccc; }
+        .wizard > .steps a span.number{ -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+        .wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active{ background:transparent; color:#333; }
+        .wizard > .steps .current a span, .wizard > .steps .current a:hover span.number, .wizard > .steps .current a:active span.number{ background:#1e79d6; color:#fff; border-color:#1e79d6; }
+        .wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active{ background:transparent; }
+        .wizard > .steps .disabled a span.number, .wizard > .steps .disabled a:hover span.number, .wizard > .steps .disabled a:active span.number{ background:white;  }
+        .wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active{ background:transparent; color:#777 }
+        .wizard > .steps .done a:hover span.number{ background:#e1e1e1 !important; }
+        .wizard > .steps .done a span.number, .wizard > .steps .done a:hover span.number, .wizard > .steps .done a:active span.number{ background:#eee; color:#999 }
+        /* Borders */
+        div.steps ul[role] li{ position: relative; }
+        div.steps ul[role] li:after, div.steps ul[role] li:before{ content: ''; width: 50%; top: 45px; border-top: 1px dashed #ddd; position: absolute; z-index: -1; }
+        div.steps ul[role] li:before{ left:0; }
+        div.steps ul[role] li:first-child:before{ display: none; }
+        div.steps ul[role] li:last-child:after{ display: none; }
+
+        .wizard.vertical div.steps ul[role] li:after, .wizard.vertical div.steps ul[role] li:before{ display: none; }
+        /* Content */
+        .wizard > .content{ background-color:transparent; }
+        .wizard > .content > .body{ width: 100%; height: 100%; }
+        /* Buttons */
+        .wizard > .actions{ text-align: center; margin-top: 20px; }
+        .wizard.vertical > .actions{ text-align: right;}
+        .wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active{ background-color:#1e79d6; padding:11px 35px; }
+        .wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active{ cursor: default; }
+}

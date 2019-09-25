@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Step Wizards | Quadra Multi Concept HTML Theme</title>
+    <meta name="description" content="Quadra is a super easy customizing, creative, professional design, bootstrap responsive and high performance website template and 700+ pages for multi-purpose using to agencies, portfolio, photographers and your all wishes." />
+    <!--Keywords -->
+    <meta name="keywords" content="modern, creative, website, html5, bootstrap responsive, parallax, soft, front-end, designer, coming soon, account, portfolio, photographer, grid, social, modules, design, personal, faq, one page, multi-purpose, branding, studio, agency, templates, css3, carousel, slider, corporate, theme, quadra, demos, blog, shop" />
+    <meta name="author" content="GoldEyes" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+
+	<!-- CSS Files -->
+    <link rel="stylesheet" href="css/plugins.css?v=2.4"/>
+    <!-- Step Wizard -->
+    <link rel="stylesheet" href="css/components/jquery.steps.css" />
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/theme.css?v=2.4"/>
+    <!-- Color Skins -->
+    <link rel="stylesheet" href="css/skins/default.css" />
+    <!-- Pill Bar -->
+    <link rel="stylesheet" href="css/components/ratings/bars-pill.css">
+
+    <!-- Styles for wizard -->
+    <style media="screen">
+        .wizard > .steps .number{ font-size:inherit; line-height: 60px; display: block; width: 60px; height: 60px; margin:0 auto 20px; border-radius: 100%; background-color:#eee; border:1px solid #ccc; }
+        .wizard > .steps a span.number{ -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+        .wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active{ background:transparent; color:#333; }
+        .wizard > .steps .current a span, .wizard > .steps .current a:hover span.number, .wizard > .steps .current a:active span.number{ background:#1e79d6; color:#fff; border-color:#1e79d6; }
+        .wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active{ background:transparent; }
+        .wizard > .steps .disabled a span.number, .wizard > .steps .disabled a:hover span.number, .wizard > .steps .disabled a:active span.number{ background:white;  }
+        .wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active{ background:transparent; color:#777 }
+        .wizard > .steps .done a:hover span.number{ background:#e1e1e1 !important; }
+        .wizard > .steps .done a span.number, .wizard > .steps .done a:hover span.number, .wizard > .steps .done a:active span.number{ background:#eee; color:#999 }
+        /* Borders */
+        div.steps ul[role] li{ position: relative; }
+        div.steps ul[role] li:after, div.steps ul[role] li:before{ content: ''; width: 50%; top: 45px; border-top: 1px dashed #ddd; position: absolute; z-index: -1; }
+        div.steps ul[role] li:before{ left:0; }
+        div.steps ul[role] li:first-child:before{ display: none; }
+        div.steps ul[role] li:last-child:after{ display: none; }
+
+        .wizard.vertical div.steps ul[role] li:after, .wizard.vertical div.steps ul[role] li:before{ display: none; }
+        /* Content */
+        .wizard > .content{ background-color:transparent; }
+        .wizard > .content > .body{ width: 100%; height: 100%; }
+        /* Buttons */
+        .wizard > .actions{ text-align: center; margin-top: 20px; }
+        .wizard.vertical > .actions{ text-align: right;}
+        .wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active{ background-color:#1e79d6; padding:11px 35px; }
+        .wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active{ cursor: default; }
+    </style>
+
+    <link rel="stylesheet" href="css/mycustomform.css" />
+
+	<!-- End Page Styles -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300i" rel="stylesheet">
+</head>
+
+<!-- BODY START -->
+<body>
+
+
+    <!-- LOADER -->
+    <div class="page-loader bg-white">
+        <div class="v-center t-center">
+            <div class="spinner">
+                <div class="spinner__item1 bg-dark"></div>
+                <div class="spinner__item2 bg-dark"></div>
+                <div class="spinner__item3 bg-dark"></div>
+                <div class="spinner__item4 bg-dark"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="stepWizard" class="py">
+
+        <!-- Divider -->
+        <div class="divider-3 font-11 gray7 uppercase container-sm bold mt sm-mb">
+            <span>Steps Wizard Slide Left Effect</span>
+        </div>
+
+        <form id="send-cv" name="send-cv" action="#">
+            <!-- Wizard -->
+            <div id="wizard1" class="wizard container-sm t-center">
+                <!-- Step -->
+                <h2>Contacts</h2>
+                <section class="bg-gray border-1 border-gray">
+                    <div class="v-top">
+                        <h3 class="t-left">Basic Info (Osnovne informacije)</h3>
+                        <!-- First Name -->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="first-name"><b>First name (Ime): </b><span style="color: red;">*</span></label>
+                                <input id="first-name" name="First_Name" type="text" form="send-cv" placeholder="Petar" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Last name -->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="first-name"><b>Last name (Prezime): </b><span style="color: red;">*</span></label>   
+                                <input id="last-name" name="Last_Name" type="text" form="send-cv" placeholder="Petrović" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Year of Birth -->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="yob"><b>Year of birth (Godina rođenja): </b><span style="color: red;">*</span></label>
+                                <input id="yob" name="YOB" type="text" form="send-cv" placeholder="1985" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Separator -->
+                        <div class="row clearfix" style="margin-bottom: 5rem;"></div>
+                        <!-- Phone number -->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="mobile-phone"><b>Mobile phone (Broj mobitela): </b><span style="color: red;">*</span></label>    
+                                <input id="mobile-phone" name="Mobile_Phone" type="text" form="send-cv" placeholder="00385991234567" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Phone apps -->
+                        <div class="row clearfix">
+                            <!-- Checkbox -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label><b>Phone apps (Aplikacije na mobitelu): </b></label>
+                                <div class="classic_checkbox">
+                                    <input id="checkboxOne" name="WhatsApp" type="checkbox" value="WhatsApp" form="send-cv"/><label for="checkboxOne">WhatsApp</label>
+                                </div>
+                                <div class="classic_checkbox">
+                                    <input id="checktwo" name="Viber" type="checkbox" value="Viber" form="send-cv"/><label for="checktwo">Viber</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Separator -->
+                        <div class="row clearfix" style="margin-bottom: 5rem;"></div>
+                        <!-- Email -->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="email-address"><b>Email address (Email adresa): </b><span style="color: red;">*</span></label>   
+                                <input id="email-address" name="Email" type="text" form="send-cv" placeholder="petar.petrovic@gmail.com" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Skype -->
+                        <div  class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="skype-nick"><b>Skype nick (Skype nadimak - ako ga imate): </b></label> 
+                                <input id="skype-nick" name="Skype" type="text" form="send-cv" placeholder="petar.petrovic1985" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Separator -->
+                        <div class="row clearfix" style="margin-bottom: 5rem;"></div>
+                        <!-- Residence - Country -->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="residence-country"><b>Country of Residence (Zemlja boravišta): </b><span style="color: red;">*</span></label>
+                                <input id="residence-country" name="Residence_Country" type="text" form="send-cv" placeholder="Croatia" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Residence - City -->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="residence-place"><b>Place of Residence (Mjesto boravišta): </b><span style="color: red;">*</span></label> 
+                                <input id="residence-place" name="Residence_Place" type="text" form="send-cv" placeholder="Zagreb" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Separator -->
+                        <div class="row clearfix" style="margin-bottom: 5rem;"></div>       
+                        <!-- Work in Ireland - Basis -->
+                        <div class="row clearfix">
+                            <!-- Radios -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label><b>Basis to work in Ireland (Osnova za rad u Irskoj): </b><span style="color: red;">*</span></label>
+                                <br>
+                                <div class="classic_checkbox radio">
+                                    <input type="radio" name="Work_Basis" id="radioOne" value="EU citizen" checked> <label for="radioOne">EU citizen (EU građanin)</label>
+                                </div>
+                                <br>
+                                <div class="classic_checkbox radio">
+                                    <input type="radio" name="Work_Basis" id="radioTwo" value="Irish visa"> <label for="radioTwo">Irish visa (Irska viza)</label>
+                                </div>
+                                <br>
+                                <div class="classic_checkbox radio">
+                                    <input type="radio" name="Work_Basis" id="radioThree" value="None"> <label for="radioThree">None currently (Nemam trenutno)</label>
+                                </div>
+                                <br>
+                                <div class="classic_checkbox radio">
+                                    <input type="radio" name="Work_Basis" id="radioFour" value="Other"> <label for="radioFour">Other (Druga)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Other basis for work in Ireland-->
+                        <div class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-sm-12 col-xs-12 t-left">
+                                <label for="other-basis"><b>If 'Other' basis for work (Ako 'Druga' osnova za rad): </b></label>  
+                                <input id="other-basis" name="Other_Basis" type="text" form="send-cv" placeholder="Married to EU citizen" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                    </div>    
+                </section>
+                <!-- Step -->
+                <h2>Work</h2>
+                <section class="bg-gray border-1 border-gray">
+                    <!-- Work Experience Part-->
+                    <div id="work-experience" class="v-top">
+                        <h3 class="t-left">Work experience (Radno iskustvo)</h3>
+                        <!-- Title -->
+                        <div id="work-1-div-0" class="row divider-1 divider-left container sm-mt xs-mb">
+                            <span class="xs-btn bg-colored3 white uppercase extrabold xs-madgin-y">Latest employment (Zadnje zaposlenje)</span>
+                        </div>
+                        <!-- From-To -->
+                        <div id="work-1-div-1" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-work-from-to"><b>From-To (Od-Do): </b><span style="color: red;">*</span></label>
+                                <input id="1-work-from-to" name="1_Work_From_To" type="text" form="send-cv" placeholder="2017-present or 2016-2018" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Employer -->
+                        <div id="work-1-div-2" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-work-employer"><b>Employer (Poslodavac): </b><span style="color: red;">*</span></label>
+                                <input id="1-work-employer" name="1_Work_Employer" type="text" form="send-cv" placeholder="Podravka d.d." required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Work - Location -->
+                        <div id="work-1-div-3" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-work-work-location"><b>Location of Work (Mjesto rada): </b><span style="color: red;">*</span></label> 
+                                <input id="1-work-work-location" name="1_Work_Location" type="text" form="send-cv" placeholder="Zagreb" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Work - Country -->
+                        <div id="work-1-div-4" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-work-work-country"><b>Country of Work (Zemlja rada): </b><span style="color: red;">*</span></label>
+                                <input id="1-work-work-country" name="1_Work_Country" type="text" form="send-cv" placeholder="Croatia" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Position -->
+                        <div id="work-1-div-5" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-work-position"><b>Position name (Naziv radnog mjesta): </b><span style="color: red;">*</span></label>
+                                <input id="1-work-position" name="1_Work_Position" type="text" form="send-cv" placeholder="Warehouse worker" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Job description -->
+                        <div id="work-1-div-6" class="row clearfix">
+                            <!-- Textarea -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-work-pos-description"><b>Main tasks (Opis glavnih zaduženja): </b></label>
+                                <textarea id="1-work-pos-description" name="1_Work_Description" type="text" form="send-cv" placeholder="eg. Boxing products. Arranging products on palletes. Driving forklift. Following manager and forman orders..." class="classic_form big radius bs-hover bs-focus"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button -->
+                    <div id="add-job" class="col-sm-6 col-xs-12 t-left" style="margin-top: 3rem;">
+                        <a href="#" class="stay lg-btn bg-colored white scale-hover inline-block bs-inset-hover">Add Job (Dodaj posao)</a>
+                    </div>
+                </section>
+                <!-- Step -->
+                <h2>Education</h2>
+                <section class="bg-gray border-1 border-gray">
+                    <!-- Education Part -->
+                    <div id="education" class="v-top">
+                        <h3 class="t-left">Formal Education (Formalno Obrazovanje)</h3>
+                        <!-- Title -->
+                        <div id="education-1-div-0" class="row divider-1 divider-left container sm-mt xs-mb">
+                            <span class="xs-btn bg-colored3 white uppercase extrabold xs-madgin-y">Highest education (Najviše obrazovanje)</span>
+                        </div>
+                        <!-- Education Type -->
+                        <div id="education-1-div-1" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-education-type"><b>Highest level of formal education (Najviši stupanj formalnog obrazovanja): </b><span style="color: red;">*</span></label>
+                                <select id="1-education-type" name="1_Education_Type" form="send-cv" required class="classic_form big radius bs-hover bs-focus">
+                                    <option value="">Select (Izaberi)</option>
+                                    <option value="Primary School">Primary School (Osnovna škola)</option>
+                                    <option value="Secondary: General (4 years)">Secondary general-education school (Gimnazija: 4 godine)</option>
+                                    <option value="Secondary: Vocational (4 years)">Secondary Vocational school (Strukovna srednja: 4 godine)</option>
+                                    <option value="Secondary: Vocational (3 years)">Secondary Vocational school (Strukovna srednja: 3 godine)</option>
+                                    <option value="Tertiary: Polytechnic school">Polytechnic school (Viša škola)</option>
+                                    <option value="Tertiary: University degree">University (Fakultet)</option>
+                                    <option value="Tertiary: Master Programme">Master (Magisterij)</option>
+                                    <option value="Tertiary: Doctoral Programme">Doctor (Doktorat)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Highest Education - Institution -->
+                        <div id="education-1-div-2" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-education-institution"><b>Education Institution Name (Ime obrazovne institucije): </b><span style="color: red;">*</span></label> 
+                                <input id="1-education-institution" name="1_Education_Institution" type="text" form="send-cv" placeholder="Electrical Engineering Vocational School Zagreb" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Highest Education - Programme -->
+                        <div id="education-1-div-3" class="row clearfix">
+                            <!-- Input -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-education-programme"><b>Programme name (Ime smjera): </b><span style="color: red;">*</span></label>
+                                <input id="1-education-programme" name="1_Education_Programme" type="text" form="send-cv" placeholder="Electrical engineering technician" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-education-country"><b>Country of Education (Zemlja obrazovanja): </b><span style="color: red;">*</span></label>
+                                <input id="1-education-country" name="1_Education_Country" type="text" form="send-cv" placeholder="Croatia" class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                        <!-- Highest Education - Year of completion -->
+                        <div id="education-1-div-4" class="row clearfix">
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-education-year-completed"><b>Year completed (Godina završetka): </b><span style="color: red;">*</span></label>
+                                <input id="1-education-year-completed" name="1_Education_Year_Completed" type="text" form="send-cv" placeholder="2002" required class="classic_form big radius bs-hover bs-focus">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button -->
+                    <div class="row clearfix" style="margin-top: 3rem; margin-bottom: 7rem;">
+                        <div id="add-education" class="col-sm-6 col-xs-12 t-left">
+                            <a href="#" class="stay lg-btn bg-colored white scale-hover inline-block bs-inset-hover">Add formal education (Dodaj formalno obrazovanje)</a>
+                        </div>
+                    </div>
+                    <!-- Courses and Training Part -->
+                    <div id="course" class="v-top">
+                        <h3 class="t-left">Courses and Trainings (Tečajevi i treninzi)</h3>
+                    </div>
+                    <!-- Button -->
+                    <div class="row clearfix"style="margin-top: 3rem;">
+                        <div id="add-course" class="col-sm-6 col-xs-12 t-left">
+                            <a href="#" class="stay lg-btn bg-colored white scale-hover inline-block bs-inset-hover">Add course (Dodaj tečaj)</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- Step -->
+                <h2>Skills</h2>
+                <section class="bg-gray border-1 border-gray">
+                    <!-- Language Part -->
+                    <div id="language" class="v-top">
+                        <h3 class="t-left">Languages (Jezici)</h3>
+                        <!-- Title -->
+                        <div id="education-1-div-0" class="row divider-1 divider-left container sm-mt xs-mb">
+                            <span class="xs-btn bg-colored3 white uppercase extrabold xs-madgin-y">English (Engleski)</span>
+                        </div>
+                        <!-- Language Listening -->
+                        <div id="language-1-div-1" class="row clearfix">
+                            <!-- Select -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-language-listening"><b>Listening (Slušanje): </b><span style="color: red;">*</span></label>
+                                <select id="1-language-listening" class="bars-pill" name="1_Language_Listening" autocomplete="off">
+                                    <option value="Listening: A1">A1</option>
+                                    <option value="Listening: A2">A2</option>
+                                    <option value="Listening: B1">B1</option>
+                                    <option value="Listening: B2">B2</option>
+                                    <option value="Listening: C1">C1</option>
+                                    <option value="Listening: C2">C2</option>
+                                </select>
+                                <div id="pill-message" class="alert qdr-alert left bottom white bg-primary" role="alert"></div>
+                            </div>
+                        </div>
+                        <!-- Language Reading -->
+                        <div id="language-1-div-1" class="row clearfix">
+                            <!-- Select -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-language-reading"><b>Reading (Čitanje): </b><span style="color: red;">*</span></label>
+                                <select id="1-language-reading" name="1_Language_Reading" form="send-cv" required class="classic_form big radius bs-hover bs-focus">
+                                    <option value="">Select (Izaberi)</option>
+                                    <option value="Reading: A1">A1</option>
+                                    <option value="Reading: A2">A2</option>
+                                    <option value="Reading: B1">B1</option>
+                                    <option value="Reading: B2">B2</option>
+                                    <option value="Reading: C1">C1</option>
+                                    <option value="Reading: C2">C2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Language Spoken Interaction -->
+                        <div id="language-1-div-1" class="row clearfix">
+                            <!-- Select -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-language-spoken-interaction"><b>Spoken Interaction (Govorna interakcija): </b><span style="color: red;">*</span></label>
+                                <select id="1-language-spoken-interaction" name="1_Language_Spoken_Interaction" form="send-cv" required class="classic_form big radius bs-hover bs-focus">
+                                    <option value="">Select (Izaberi)</option>
+                                    <option value="Spoken Interaction: A1">A1</option>
+                                    <option value="Spoken Interaction: A2">A2</option>
+                                    <option value="Spoken Interaction: B1">B1</option>
+                                    <option value="Spoken Interaction: B2">B2</option>
+                                    <option value="Spoken Interaction: C1">C1</option>
+                                    <option value="Spoken Interaction: C2">C2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Language Spoken Production -->
+                        <div id="language-1-div-1" class="row clearfix">
+                            <!-- Select -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-language-spoken-production"><b>Spoken production (Govorna produkcija): </b><span style="color: red;">*</span></label>
+                                <select id="1-language-spoken-production" name="1_Language_Spoken_Production" form="send-cv" required class="classic_form big radius bs-hover bs-focus">
+                                    <option value="">Select (Izaberi)</option>
+                                    <option value="Spoken Production: A1">A1</option>
+                                    <option value="Spoken Production: A2">A2</option>
+                                    <option value="Spoken Production: B1">B1</option>
+                                    <option value="Spoken Production: B2">B2</option>
+                                    <option value="Spoken Production: C1">C1</option>
+                                    <option value="Spoken Production: C2">C2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Language Writing -->
+                        <div id="language-1-div-1" class="row clearfix">
+                            <!-- Select -->
+                            <div class="col-md-8 col-sm-12 col-xs-12 t-left">
+                                <label for="1-language-writing"><b>Writing (Pisanje): </b><span style="color: red;">*</span></label>
+                                <select id="1-language-writing" name="1_Language_Writing" form="send-cv" required class="classic_form big radius bs-hover bs-focus">
+                                    <option value="">Select (Izaberi)</option>
+                                    <option value="Writing: A1">A1</option>
+                                    <option value="Writing: A2">A2</option>
+                                    <option value="Writing: B1">B1</option>
+                                    <option value="Writing: B2">B2</option>
+                                    <option value="Writing: C1">C1</option>
+                                    <option value="Writing: C2">C2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Step -->
+                <h2>Submit</h2>
+                <section class="bg-gray border-1 border-gray">
+                    <div class="v-center">
+                        <span class="block icon-check text-success fs-120 lh-sm"></span>
+                        <h4 class="normal">
+                            Well done! This is OK!
+                        </h4>
+                    </div>
+                </section>
+            </div><!-- End Wizard -->
+        </form><!-- End of FORM -->
+    </section>
+
+
+
+	<!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js?v=2.3"></script>
+    <!-- Step Wizard -->
+    <script type="text/javascript" src="js/components/jquery.steps.min.js"></script>
+    <!-- Bar Ratings -->
+    <script src="js/components/jquery.barrating.min.js"></script>
+    <!-- MAIN SCRIPTS - Classic scripts for all theme -->
+    <script type="text/javascript" src="js/scripts.js?v=2.3"></script>
+    <!-- Bars Pill -->
+    <script src="js/components/jquery.bars.pill.js"></script>
+    
+    <!-- END JS FILES -->
+
+    <script>
+        $(function ()
+        {
+            $("#wizard").steps({
+                headerTag: "h2",
+                bodyTag: "section",
+                transitionEffect: "fade"
+            });
+
+            $("#wizard1").steps({
+                headerTag: "h2",
+                bodyTag: "section",
+                transitionEffect: "slideLeft"
+            });
+
+            $("#wizard2").steps({
+                headerTag: "h2",
+                bodyTag: "section",
+                transitionEffect: "fade",
+                stepsOrientation: "vertical"
+            });
+
+            $('.wizard a').addClass('no-scroll click-effect');
+        });
+    </script>
+
+</body>
+<!-- Body End -->
+</html>

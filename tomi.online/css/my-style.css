@@ -1,0 +1,29 @@
+.content-section {
+    padding-top: 6em;
+}
+
+.download-section {
+    color:white; 
+}
+
+.move-div-down {
+    margin-bottom: 6em;
+}
+
+.move-paragraph-down {
+    margin-bottom: 3em;
+}
+
+.image-margin {
+    margin: 1em;
+}
+
+.bijelo-dugme {
+    color: white;
+    font-weight: bold;
+}
+@media (max-width: 500px) {
+    body {
+        max-width: 100vw;
+    }
+}
